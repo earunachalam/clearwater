@@ -11,6 +11,7 @@
 !*.sh
 !*.template
 !*.tex
+!*.tpp
 !Makefile*
 !makefile*
 
