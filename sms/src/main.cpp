@@ -72,9 +72,9 @@ int main(int argc, char* argv[])
     double lambda_star = std::stod(argv[2]);
 
     std::string inputfilename = "input.mms";
-    size_t ntsteps,
-           printvl;
-    double dt,
+    size_t ntsteps = 1000,
+           printvl = 100;
+    double dt = 5e-3,
            L = 10.;    
     double xmin = -L, xmax = L;
     double ymin = -L, ymax = L;
@@ -99,7 +99,7 @@ int main(int argc, char* argv[])
 
     while(std::getline(inputfile, line))
     {
-        //std::cout << line << std::endl;
+        std::cout << line << "\n";
         std::istringstream iss(line);
 
         // a series of string tokens comprises a single instruction
@@ -485,7 +485,6 @@ int main(int argc, char* argv[])
             rel_pos(r1, r2, rp);
             iBond->r = rp[3];
             iBond->evolve_r0(max_ampl, lambda_star, dt);
-            //iBond->r0 += std::stod(argv[1])*(iBond->r - iBond->r0)*dt;
 
             // add harmonic restoring force
             double deltaR = iBond->r - iBond->r0;

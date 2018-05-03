@@ -35,9 +35,9 @@ class EvolvingHarmonicBond : public HarmonicBond
         {
             double deviation = this->r - this->r0;
             double s = sgn(deviation);
-            deviation = std::fabs(deviation);
+            //deviation = std::fabs(deviation);
 
-            double g = deviation;
+            double g = s*max_ampl*deviation;
             //double g = (deviation < lambda_star) ? 
                 //s*max_ampl : 
                 //s*max_ampl*std::exp(-(deviation-lambda_star));
