@@ -492,11 +492,11 @@ int main(int argc, char* argv[])
             {
                 if (!vs.at(iatom)->frozen)
                 {
-                    vs.at(iatom)->vxyz.at(icoord) -= (iBond->k*deltaR + iBond->addforce)*rp.at(icoord);
+                    vs.at(iatom)->vxyz.at(icoord) -= (iBond->k*deltaR + iBond->addforce*rp[3])*rp.at(icoord);
                 }
                 if (!vs.at(jatom)->frozen)
                 {
-                    vs.at(jatom)->vxyz.at(icoord) += (iBond->k*deltaR + iBond->addforce)*rp.at(icoord);
+                    vs.at(jatom)->vxyz.at(icoord) += (iBond->k*deltaR + iBond->addforce*rp[3])*rp.at(icoord);
                 }
             }
         }
