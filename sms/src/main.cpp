@@ -16,13 +16,13 @@
 #include "Vertex.h"
 
 
+#include "core/typedefs.h"
+#include "core/numeric.h"
+
+
 #include "export_lammpstrj.h"
 #include "export_lengths.h"
-#include "load_table.h"
-#include "rand_init_perturbation.h"
 #include "rel_pos.h"
-#include "to_numeric.h"
-#include "typedefs.h"
 
 
 
@@ -493,9 +493,9 @@ int main(int argc, char* argv[])
                 if (!vs.at(iatom)->frozen)
                 {
                     vs.at(iatom)->vxyz.at(icoord) -= (iBond->k*deltaR + iBond->addforce*rp[3])*rp.at(icoord);
-                }
-                if (!vs.at(jatom)->frozen)
-                {
+                }                                                                      
+                if (!vs.at(jatom)->frozen)                                             
+                {                                                                      
                     vs.at(jatom)->vxyz.at(icoord) += (iBond->k*deltaR + iBond->addforce*rp[3])*rp.at(icoord);
                 }
             }

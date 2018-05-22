@@ -1,12 +1,15 @@
 #ifndef EXPORT_LENGTHS_H
 #define EXPORT_LENGTHS_H
 
+
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
 
-#include "typedefs.h"
+
+#include "core/typedefs.h"
 #include "Bond.h"
+
 
 
 void export_lengths(FILE* f, uint tstep, uint natom, std::vector<Bond*>& bs)

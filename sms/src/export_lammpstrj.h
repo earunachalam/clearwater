@@ -1,12 +1,15 @@
 #ifndef EXPORT_LAMMPSTRJ_H
 #define EXPORT_LAMMPSTRJ_H
 
+
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
 
-#include "typedefs.h"
+
+#include "core/typedefs.h"
 #include "Vertex.h"
+
 
 
 void export_lammpstrj(FILE* f, uint tstep, uint natom, std::vector<Vertex*>& vs, double xmin, double xmax, double ymin, double ymax, double zmin, double zmax)

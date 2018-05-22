@@ -1,11 +1,14 @@
 #ifndef REL_POS_H
 #define REL_POS_H
 
+
 #include <cmath>
 #include <cstdlib>
 #include <vector>
 
-#include "typedefs.h"
+
+#include "core/typedefs.h"
+
 
 
 void rel_pos(std::vector<double>& xyz1, std::vector<double>& xyz2, std::vector<double>& rel_pos12)

@@ -1,9 +1,12 @@
 #ifndef VERTEX_H
 #define VERTEX_H
 
+
 #include <vector>
 
-#include "typedefs.h"
+
+#include "core/typedefs.h"
+
 
 
 class Vertex
