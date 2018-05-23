@@ -488,6 +488,7 @@ int main(int argc, char* argv[])
 
             // add harmonic restoring force
             double deltaR = iBond->r - iBond->r0;
+
             for (uint icoord = 0; icoord < 3; ++icoord)
             {
                 if (!vs.at(iatom)->frozen)

@@ -42,7 +42,7 @@ class EvolvingHarmonicBond : public HarmonicBond
                 s*max_ampl : 
                 s*max_ampl*std::exp(-(deviation-lambda_star));
 
-            this->r0 += g*deviation*dt;
+            //this->r0 += g*deviation*dt;
         }
 
 };
