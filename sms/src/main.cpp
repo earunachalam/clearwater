@@ -563,13 +563,13 @@ int main(int argc, char* argv[])
 
             export_lammpstrj(ofp_traj, tstep, natoms, vs, xmin, xmax, ymin, ymax, zmin, zmax);
             export_lengths(ofp_length, tstep, natoms, bs);
+
+            printf("%d\n", tstep);
+
+			torque[3] = std::sqrt(torque[0]*torque[0] + torque[1]*torque[1] + torque[2]*torque[2]);
+			fprintf(ofp_torque, "%d %f\n", tstep, torque[3]);
         }
     
-        torque[3] = std::sqrt(torque[0]*torque[0] + torque[1]*torque[1] + torque[2]*torque[2]);
-        fprintf(ofp_torque, "%d %f\n", tstep, torque[3]);
-
-        if (tstep%(ntsteps/100) == 0)
-            printf("%d\n", tstep);
     }
 
     fclose(ofp_traj);
