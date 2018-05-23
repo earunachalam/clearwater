@@ -323,47 +323,47 @@ int main(int argc, char* argv[])
             {
                 iopt++;
                 
-                if (instruction.at(iopt) == "table")
-                {
-                    iopt++;
+                //if (instruction.at(iopt) == "table")
+                //{
+                    //iopt++;
 
-                    std::string dirname = instruction.at(iopt++);
+                    //std::string dirname = instruction.at(iopt++);
  
-                    std::string cname   = dirname + "/config.dat";
+                    //std::string cname   = dirname + "/config.dat";
  
-                    std::string xname   = dirname + "/x.dat";
-                    std::string yname   = dirname + "/y.dat";
-                    //std::string zname   = dirname + "/z.dat";
+                    //std::string xname   = dirname + "/x.dat";
+                    //std::string yname   = dirname + "/y.dat";
+                    ////std::string zname   = dirname + "/z.dat";
  
-                    std::string fxname  = dirname + "/fx.dat";
-                    std::string fyname  = dirname + "/fy.dat";
-                    //std::string fzname  = dirname + "/fz.dat";
+                    //std::string fxname  = dirname + "/fx.dat";
+                    //std::string fyname  = dirname + "/fy.dat";
+                    ////std::string fzname  = dirname + "/fz.dat";
                     
-                    uint nrows, ncols;
-                    std::vector<std::vector<double> > config;
+                    //uint nrows, ncols;
+                    //std::vector<std::vector<double> > config;
 
-                    load_table(cname, config, nrows, ncols);
+                    //load_table(cname, config, nrows, ncols);
                     
-                    e->nx    = config[0][0] - 1;
-                    e->ny    = config[0][1] - 1;
-                    //e->nz    = config[0][2] - 1;
+                    //e->nx    = config[0][0] - 1;
+                    //e->ny    = config[0][1] - 1;
+                    ////e->nz    = config[0][2] - 1;
                     
-                    e->xstep = config[2][0];
-                    e->ystep = config[2][1];
-                    //e->zstep = config[2][2];
+                    //e->xstep = config[2][0];
+                    //e->ystep = config[2][1];
+                    ////e->zstep = config[2][2];
 
-                    e->xmin  = config[1][0] + 0.5*e->xstep;
-                    e->ymin  = config[1][1] + 0.5*e->ystep;
-                    //e->zmin  = config[1][2] + 0.5*e->zstep;
+                    //e->xmin  = config[1][0] + 0.5*e->xstep;
+                    //e->ymin  = config[1][1] + 0.5*e->ystep;
+                    ////e->zmin  = config[1][2] + 0.5*e->zstep;
 
-                    load_flattened_table(xname, e->x, nrows, ncols);
-                    load_flattened_table(yname, e->y, nrows, ncols);
-                    //load_flattened_table(zname, e->z, nrows, ncols);
+                    //load_flattened_table(xname, e->x, nrows, ncols);
+                    //load_flattened_table(yname, e->y, nrows, ncols);
+                    ////load_flattened_table(zname, e->z, nrows, ncols);
 
-                    load_flattened_table(fxname, e->fx, nrows, ncols);
-                    load_flattened_table(fyname, e->fy, nrows, ncols);
-                    //load_flattened_table(fzname, e->fz, nrows, ncols);
-                }
+                    //load_flattened_table(fxname, e->fx, nrows, ncols);
+                    //load_flattened_table(fyname, e->fy, nrows, ncols);
+                    ////load_flattened_table(fzname, e->fz, nrows, ncols);
+                //}
             }
         }
         else if (instruction.at(0) == "integrator")
